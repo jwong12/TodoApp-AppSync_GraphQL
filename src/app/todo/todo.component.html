@@ -1,0 +1,12 @@
+<div style="text-align:center">
+    <input type="text" #todoName>
+    <button (click)="createTodo(todoName)">Create Todo</button>
+  
+    <div *ngFor="let todo of allTodos">
+      <hr>
+      <p> Title: {{todo.name}}</p>
+      <p> Description: {{todo.body}}</p>
+      <p> Completed: {{todo.completed ? 'true' : 'false'}}</p>
+      <p> CreateAt: {{todo.createdAt}}</p>
+    </div>
+  </div>
